@@ -1,0 +1,212 @@
+import type { AuthorityLevel, PipelineStage, TwinLevel } from "./types";
+
+export const OMEGA_VERSION = "6.0";
+export const DIGISIM_NAME = "Physics DigiSim";
+export const DIGISIM_VERSION = "5.3";
+export const DHC_NAME = "Digital Hadron Collider Twin";
+export const DHC_VERSION = "21.0";
+export const OMEGA_NAME = "OMEGA Universal Intelligence Fabric";
+export const OMEGA_ARCHITECT = "James Marcelle Shackelford / TrillionGDP";
+export const OMEGA_TITLE = "Inventor · Systems Architect · Applied Futurist";
+export const CONTACT_NAME = "James Marcelle Shackelford";
+export const CONTACT_HANDLE = "TrillionGDP";
+export const CONTACT_PHONE = "919-333-5626";
+export const CONTACT_TEL = "+19193335626";
+export const CONTACT_ORG = "AI Teams";
+export const CONTACT_BRIEF =
+  "Collaboration, sale, partnering, and integration for governed intelligence systems.";
+export const PRIMARY_BOUNDARY = "self-organization != self-authorization";
+
+export const AXIOMS = [
+  "AGENT != AUTHORITY",
+  "CAPABILITY != PERMISSION",
+  "RECOMMENDATION != AUTHORIZATION",
+  "AI_OUTPUT != EVIDENCE",
+  "MEMORY != REALITY",
+  "MEMORY != EVIDENCE",
+  "OBSERVATION != INFERENCE",
+  "INFERENCE != SIMULATION",
+  "SIMULATION != FORECAST",
+  "FORECAST != REALITY",
+  "SCENARIO != REALITY",
+  "COUNTERFACTUAL != OBSERVATION",
+  "MODEL != REALITY",
+  "MODEL_FIT != TRUTH",
+  "CORRELATION != CAUSATION",
+  "ANOMALY != DISCOVERY",
+  "PROBABILITY != CERTAINTY",
+  "CONSENSUS != VALIDATION",
+  "UNKNOWN != ZERO",
+  "MISSING_DATA != ABSENCE",
+  "SELF_ORGANIZATION != SELF_AUTHORIZATION",
+  "SELF_IMPROVEMENT != TRUST_ROOT_MODIFICATION",
+  "OPTIMIZATION != SAFETY",
+  "LOWER_COST != LOWER_RISK",
+  "LOCAL_AUTHORITY MUST BE PRESERVED",
+  "UNCERTAINTY MUST PROPAGATE",
+  "CONTRADICTIONS MUST REMAIN VISIBLE",
+  "PROVENANCE MUST SURVIVE TRANSFORMATION",
+  "TRUSTED_STATE REQUIRES VALIDATION",
+  "HIGH_CONSEQUENCE_ACTION REQUIRES GOVERNANCE",
+] as const;
+
+export const TRUST_ROOTS = [
+  "OMEGA_GUARD_ROOT",
+  "CRYPTOGRAPHIC_IDENTITY_ROOT",
+  "POLICY_ROOT",
+  "AUDIT_ROOT",
+  "PHYSICS_INTEGRITY_ROOT",
+  "TRUSTED_STATE_ROOT",
+  "MODEL_CERTIFICATION_ROOT",
+] as const;
+
+export const AUTHORITY_LABEL: Record<AuthorityLevel, string> = {
+  A0: "Observe only",
+  A1: "Analyze",
+  A2: "Recommend",
+  A3: "Simulate and optimize",
+  A4: "Preauthorized low risk",
+  A5: "Explicitly authorized execution",
+};
+
+export const AUTHORITY_RANK: Record<AuthorityLevel, number> = {
+  A0: 0,
+  A1: 1,
+  A2: 2,
+  A3: 3,
+  A4: 4,
+  A5: 5,
+};
+
+export const PIPELINE: { id: PipelineStage; label: string }[] = [
+  { id: "INGEST", label: "Ingest" },
+  { id: "AUTHENTICATE", label: "Auth" },
+  { id: "CLASSIFY", label: "Classify" },
+  { id: "QUALITY_GATE", label: "Quality" },
+  { id: "OBSERVE", label: "Observe" },
+  { id: "ESTIMATE", label: "Estimate" },
+  { id: "RECONSTRUCT", label: "Reconstruct" },
+  { id: "UNDERSTAND", label: "Understand" },
+  { id: "SIMULATE", label: "Simulate" },
+  { id: "FORECAST", label: "Forecast" },
+  { id: "CAUSAL_ANALYSIS", label: "Causal" },
+  { id: "SCENARIO_GENERATION", label: "Scenario" },
+  { id: "RISK", label: "Risk" },
+  { id: "OPTIMIZATION", label: "Optimize" },
+  { id: "AGENT_COORDINATION", label: "Agents" },
+  { id: "RED_TEAM", label: "Red team" },
+  { id: "VALIDATION", label: "Validate" },
+  { id: "POLICY", label: "Policy" },
+  { id: "AUTHORITY", label: "Authority" },
+  { id: "ACTION_OR_RECOMMENDATION", label: "Recommend" },
+  { id: "OUTCOME_VERIFICATION", label: "Verify" },
+  { id: "RECOVERY", label: "Recover" },
+  { id: "LEARNING", label: "Learn" },
+  { id: "MEMORY", label: "Memory" },
+  { id: "KNOWLEDGE_UPDATE", label: "Knowledge" },
+  { id: "MODEL_REVALIDATION", label: "Revalidate" },
+  { id: "AUDIT", label: "Audit" },
+  { id: "CONTINUE", label: "Continue" },
+];
+
+export const GUARD_LAYERS = [
+  { id: "L0_HUMAN_AUTHORITY", label: "Human authority", duty: "External grant. Never inferred." },
+  { id: "L1_CRYPTOGRAPHIC_IDENTITY", label: "Identity", duty: "Signed principals only." },
+  { id: "L2_POLICY_GOVERNOR", label: "Policy", duty: "Fail closed on unknown." },
+  { id: "L3_OMEGA_DEFENDER", label: "Defender", duty: "Observe, correlate, explain, simulate, recommend, record." },
+  { id: "L4_SANDBOX", label: "Sandbox", duty: "Untrusted compute stays contained." },
+  { id: "L5_HASH_AUDIT", label: "Hash audit", duty: "Provenance survives transformation." },
+] as const;
+
+export const THEORY_DOMAINS = [
+  "classical_mechanics",
+  "fluid_dynamics",
+  "thermodynamics",
+  "statistical_mechanics",
+  "electromagnetism",
+  "plasma",
+  "chemistry",
+  "materials",
+  "solid_continuum",
+  "quantum_mechanics",
+  "quantum_information",
+  "relativity",
+  "astrophysics",
+  "gravity",
+  "nuclear_particle",
+  "biophysics",
+  "earth_climate",
+  "dark_matter",
+] as const;
+
+export const TEAM_PATTERNS = {
+  SCIENCE: ["RESEARCH", "PHYSICS", "MODEL_DISCOVERY", "VALIDATION", "EVIDENCE"],
+  ENGINEERING: ["PHYSICS", "SCENARIO", "OPTIMIZATION", "RESILIENCE", "VALIDATION"],
+  SECURITY: ["OBSERVER", "SECURITY", "FORECAST", "RECOVERY", "AUDITOR"],
+  MISSION: ["MISSION", "PHYSICS", "SCENARIO", "OPTIMIZATION", "RISK", "VALIDATION"],
+} as const;
+
+export const LINEAGE = [
+  { version: "0.1", title: "Physics DigiSim", note: "Incompressible Navier–Stokes digital simulation" },
+  { version: "1.0", title: "JMS Master Bus", note: "Authenticated, hashed, audited events" },
+  { version: "2.0", title: "OMEGA-GUARD", note: "Defensive immune system" },
+  { version: "3.0", title: "State fabric", note: "Observed ≠ inferred ≠ simulated" },
+  { version: "4.0", title: "Knowledge + evidence", note: "Lineage-preserving graph" },
+  { version: "5.2", title: "Synthesis", note: "Generated models require validation" },
+  { version: "5.3", title: "Theory fabric", note: "Conflicts remain explicit" },
+  { version: "5.4", title: "Universal twins", note: "Twin ≠ reality" },
+  { version: "5.5", title: "World reconstruction", note: "Unknown ≠ zero" },
+  { version: "5.6", title: "Scenario engine", note: "Branches cannot overwrite trusted state" },
+  { version: "5.7", title: "Decision + resilience", note: "Safety is a hard constraint" },
+  { version: "5.8", title: "Agent fabric", note: "Capability ≠ permission" },
+  { version: "5.9", title: "Memory + context", note: "Memory ≠ evidence" },
+  { version: "6.0", title: "Unified fabric", note: "One bus. One guard. One authority model." },
+  { version: "6.1", title: "Dark Matter Lab", note: "Simulation ≠ evidence. SCI:DISC stays closed." },
+  { version: "6.2", title: "Visual fabric + voice", note: "2D/3D/4D are pictures. Speech is A2." },
+  { version: "6.3", title: "Visual + voice loop", note: "Orbit, 4-rotation, live briefing. Pictures ≠ evidence." },
+  { version: "6.4", title: "SCI-NETv2 core", note: "Joint likelihood, research run, evidence graph. Simulation ≠ evidence." },
+  { version: "6.5", title: "Hadron collider twin", note: "Toy LHC Monte Carlo. Twin ≠ machine. Peak ≠ discovery." },
+  { version: "6.6", title: "p–O cosmic-ray lab", note: "ATLAS literature calibrates models. Collision ≠ air shower." },
+  { version: "7.0", title: "Universal nuclear twin", note: "Beam species, Glauber geometry, shower mapping, model disagreement." },
+  { version: "8.0", title: "Experiment package", note: "Portable hashed JSON. Export ≠ observation. Replay ≠ replication." },
+  { version: "9.0", title: "Profiled likelihood", note: "Toy covariance. q(μ) is a diagnostic. Profile ≠ discovery." },
+  { version: "10.0", title: "3D/4D event display", note: "Orbitable barrel + generation slab. Pictures ≠ evidence." },
+  { version: "11.0", title: "Asimov expected", note: "Expected Z is a diagnostic. Asimov ≠ data. CLs toy ≠ exclusion." },
+  { version: "12.0", title: "Frozen protocol", note: "Freeze before you peek. Unblind of synthetic is refused. Frozen ≠ observed." },
+  { version: "13.0", title: "Leave-one-out", note: "A preference that flips when a region drops is not a claim. Stable ≠ evidence." },
+  { version: "14.0", title: "ATLAS geometry", note: "Run 2/3 literature envelopes. A drawing of ATLAS is not ATLAS." },
+  { version: "15.0", title: "ATLAS response", note: "Stochastic ⊕ constant smear. A ray through TileCal is not a cluster." },
+  { version: "16.0", title: "CERN physics kernel", note: "EMIT-LUM-001. Reduced-order L from σ. Twin ≠ machine." },
+  { version: "17.0", title: "Active experiment design", note: "The designer proposes. Humans authorize. Proposal ≠ authorization." },
+  { version: "18.0", title: "Scientific swarm", note: "Eleven agents, required dissent. Votes ≠ authority. Report ≠ discovery." },
+  { version: "19.0", title: "Kernel capsule", note: "Seal the run. Replay the seed. Hash match ≠ independent lab." },
+  { version: "20.0", title: "Fault injection", note: "A stuck bit is not a quench. Unexplained ≠ discovery." },
+  { version: "21.0", title: "QCORR prototype", note: "Synthetic biphoton holography. Reconstruction ≠ photograph. Fail closed." },
+] as const;
+
+export const TWIN_LEVELS: TwinLevel[] = [
+  "COMPONENT",
+  "DEVICE",
+  "ASSET",
+  "SYSTEM",
+  "FACILITY",
+  "BUILDING",
+  "CAMPUS",
+  "UTILITY_NETWORK",
+  "TRANSPORT_NETWORK",
+  "WATER_NETWORK",
+  "ENERGY_NETWORK",
+  "COMMUNICATION_NETWORK",
+  "CITY",
+  "COUNTY",
+  "REGION",
+  "STATE",
+  "COUNTRY",
+  "CONTINENT",
+  "PLANETARY_SYSTEM",
+  "GLOBAL_SYSTEM",
+];
+
+export const POLICY_HASH = "om_policy_v6_root";
+export const MODEL_HASH = "om_model_ns_incomp_v53";
+export const DEFAULT_AUTHORITY: AuthorityLevel = "A2";

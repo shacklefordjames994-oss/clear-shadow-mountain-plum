@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8080/package",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 1473,
+      "bodyTextHash": "422c0a128a92bfbdfd734c9c64e7febf4cbd0fe5c1c5835aaeda4970b35691e5",
+      "bodyTextPrefix": "OMEGA v6.0 SEQ 001842 A2 CLEAR --:--:--Z SELF-ORGANIZATION != SE",
+      "horizontalOverflow": false,
+      "consoleErrors": [
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <MatchView router={{...}} match={{id:\"/_app/...\", ...}}>\n      <SafeFragment>\n        <SafeFragment fallback={null}>\n          <CatchBoundary getResetKey={function getResetKey} errorComponent={function AppErrorComponent} ...>\n            <SafeFragment fallback={function fallback}>\n              <MatchInnerImpl match={{id:\"/_app/...\", ...}}>\n                <Lazy>\n                  <PackageDesk>\n                    <div>\n                      <PageHeader>\n                      <div>\n                      <Panel className=\"mt-4\" title=\"Run config...\" meta={<Badge>}>\n                        <section className=\"min-w-0 ov...\">\n                          <header>\n                          <div className=\"grid gap-4...\">\n                            <label>\n                            <label>\n                            <label className=\"block text...\">\n                              <span>\n                              <input\n                                type=\"range\"\n                                className=\"mt-2 h-11 w-full accent-primary\"\n                                min={40}\n                                max={300}\n                                step={20}\n                                value={160}\n                                onChange={function onChange}\n-                               style={{}}\n                              >\n                            <label className=\"flex h-11 ...\">\n                              <input\n                                type=\"checkbox\"\n                                className=\"size-5 accent-primary\"\n                                checked={false}\n                                onChange={function onChange}\n-                               style={{}}\n                              >\n                              ...\n                          ...\n                      ...\n"
+      ],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/package-v11.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 1190,
+      "bodyTextHash": "cef17eab3ce6cfb31c3733ac2b752eb00806143aa19b50602d2473ed9c02b87d",
+      "bodyTextPrefix": "OMEGA A2 CLEAR DHC-TWIN V11 · ASIMOV EXPECTED Portable sealed ru",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/package-v11-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/package-v11.json"
+}

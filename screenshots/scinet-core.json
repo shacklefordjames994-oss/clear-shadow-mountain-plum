@@ -1,0 +1,39 @@
+{
+  "url": "http://127.0.0.1:8080/dark-matter",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": true,
+      "bodyTextLen": 1281,
+      "bodyTextHash": "152b3672f0043fa1a743b730982be585c16cf24ba0d58803983b93401f1716bd",
+      "bodyTextPrefix": "OMEGA v6.0 SEQ 001842 A2 CLEAR --:--:--Z SELF-ORGANIZATION != SE",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/scinet-core.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": true,
+      "bodyTextLen": 1023,
+      "bodyTextHash": "c904f4609f0e0546f7f2a395caf97f53b0fe1dfde0f6f920f7b431586e61bc7d",
+      "bodyTextPrefix": "OMEGA A2 CLEAR DARK MATTER LAB · SCI-NETV2 Digital dark-matter d",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/scinet-core-mobile.png"
+    }
+  },
+  "brandWarnings": [
+    "BRAND WARNING: this looks like a game/canvas app but src/lib/og/site.json is missing \"type\": \"x:game\". X uses og:type=x:game to present the unfurl as a game card — set it in /workspace/src/lib/og/site.json per /workspace/.grok/skills/og/SKILL.md. Do not invent x:type or overload twitter:card as the game signal.",
+    "BRAND WARNING: this looks like a game/canvas app but /workspace/public/x-banner.jpg is missing. Games need a 50:11 X feed card (1200×264 JPEG) at public/x-banner.jpg — open /workspace/.grok/skills/og/SKILL.md and finish the brand-asset pass."
+  ],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/scinet-core.json"
+}

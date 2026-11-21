@@ -1,0 +1,23 @@
+{
+  "gates": {
+    "clean_checkout": "NOT_RUN",
+    "environment": "PASS",
+    "tests": "PASS",
+    "ground_state_reproduction": "PASS",
+    "solver_agreement": "PASS",
+    "wavefunction": "PASS",
+    "uncertainty": "PASS",
+    "physical_review": "PASS",
+    "reproducibility": "IN_PROGRESS",
+    "independent_review": "NOT_RUN"
+  },
+  "failed": [],
+  "missing": [
+    "clean_checkout",
+    "reproducibility",
+    "independent_review"
+  ],
+  "reviewer_recorded": false,
+  "scientific_release_status": "NOT_CERTIFIED",
+  "self_certification": false
+}

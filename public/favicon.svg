@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="OMEGA">
+  <rect width="32" height="32" rx="7" fill="#090a0c"/>
+  <path
+    d="M6 24h5.8v-3.4C11.8 14.2 13.5 9.6 16 9.6s4.2 4.6 4.2 11V24H26"
+    fill="none"
+    stroke="#d4d8df"
+    stroke-width="2.6"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+  />
+</svg>

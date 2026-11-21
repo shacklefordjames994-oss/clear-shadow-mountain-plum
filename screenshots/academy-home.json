@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 1823,
+      "bodyTextHash": "4a9feb9a409c4e58aa31fbfc5e4b1089f8b0aafea6d0227ab097e295a3922236",
+      "bodyTextPrefix": "OMEGA v6.0 SEQ 001842 A2 CLEAR --:--:--Z SELF-ORGANIZATION != SE",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/academy-home.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 1597,
+      "bodyTextHash": "fcd08ac5601fd4bb0212bcbdd97451156deb4f9012c648938cf43c92defb86c3",
+      "bodyTextPrefix": "OMEGA A2 CLEAR OMEGA V6.0 · UNIFIED FABRIC Command center One bu",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/academy-home-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/academy-home.json"
+}

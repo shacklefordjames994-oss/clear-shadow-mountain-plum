@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8081/visuals",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 1228,
+      "bodyTextHash": "0f7fcf79705eeffb8bc8f4c29276cd72ea2da903ac1affce2d7bb0915eb01e94",
+      "bodyTextPrefix": "OMEGA v6.0 SEQ 001842 A2 CLEAR 02:19:22Z SELF-ORGANIZATION != SE",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/omega-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 970,
+      "bodyTextHash": "ac6a9f9728adaa1e1dedd6a3acab2c32f6b72e5c5bfbf776c1671839e497abf2",
+      "bodyTextPrefix": "OMEGA A2 CLEAR VISUAL FABRIC · 2D / 3D / 4D Geometry is not comp",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/omega-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/omega-built.json"
+}

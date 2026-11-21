@@ -1,0 +1,43 @@
+{
+  "url": "http://127.0.0.1:8081/collider",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": true,
+      "bodyTextLen": 1284,
+      "bodyTextHash": "66bb26298cd6fc765b4e39d8e82535531b6244be6d2814e82dcf3bf5d6d86944",
+      "bodyTextPrefix": "OMEGA v6.0 SEQ 001842 A2 CLEAR 11:26:17Z SELF-ORGANIZATION != SE",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/collider-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": true,
+      "bodyTextLen": 1012,
+      "bodyTextHash": "4d6666e84e06021dd35d6f3576bdf9f91275b944d5a6cf227dcd053b5c993034",
+      "bodyTextPrefix": "OMEGA A2 CLEAR DIGITAL HADRON COLLIDER TWIN · SCI-NETV2 Collider",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/collider-built-mobile.png"
+    }
+  },
+  "brandWarnings": [
+    "BRAND WARNING: this looks like a game/canvas app but src/lib/og/site.json is missing \"type\": \"x:game\". X uses og:type=x:game to present the unfurl as a game card — set it in /workspace/src/lib/og/site.json per /workspace/.grok/skills/og/SKILL.md. Do not invent x:type or overload twitter:card as the game signal.",
+    "BRAND WARNING: this looks like a game/canvas app but /workspace/public/x-banner.jpg is missing. Games need a 50:11 X feed card (1200×264 JPEG) at public/x-banner.jpg — open /workspace/.grok/skills/og/SKILL.md and finish the brand-asset pass."
+  ],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/collider-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "desktop: body text replaced (similar length, page start changed)"
+  ]
+}

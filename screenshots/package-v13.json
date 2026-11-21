@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/package",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 1435,
+      "bodyTextHash": "132d4b831434db37dda4fda2eec57481768fcbc607a8ac4aa03039fff533b67e",
+      "bodyTextPrefix": "OMEGA v6.0 SEQ 001842 A2 CLEAR --:--:--Z SELF-ORGANIZATION != SE",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/package-v13.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 1152,
+      "bodyTextHash": "e6007d0af73827bb9c66b0a243929bc5b74d2198ac85e9fda5a50f6235076a49",
+      "bodyTextPrefix": "OMEGA A2 CLEAR DHC-TWIN V13 · LEAVE-ONE-OUT Portable sealed run ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/package-v13-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/package-v13.json"
+}

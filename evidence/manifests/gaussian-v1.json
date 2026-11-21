@@ -1,0 +1,29 @@
+{
+  "model_version": "gaussian-v1",
+  "h_J_s": 6.62607015e-34,
+  "hbar_J_s": 1.054571817e-34,
+  "hbar_source": "engine constant 1.054571817e-34 J s; sibling h/(2*pi) is recorded and not substituted",
+  "u_kg": 1.6605390666e-27,
+  "u_source": "CODATA 2018 atomic mass constant",
+  "ev_J": 1.602176634e-19,
+  "ev_source": "exact SI electronvolt",
+  "mu_u": 0.5,
+  "V0_eV": 5.0,
+  "a_pm": 100.0,
+  "ell": 0,
+  "origin_boundary": "u(0)=0 for ell=0",
+  "outer_boundary": "decaying real exponential for E<0 on a finite domain",
+  "K_eV": 0.0041801592804967215,
+  "g": 1196.1266699401604,
+  "historical_K_eV": [
+    0.004180159277260055,
+    0.004180159279778997,
+    0.0041801592804967215
+  ],
+  "historical_K_status": "HISTORICAL_NOT_SELECTED",
+  "manifest_sha256": "e9f5e892b385c722e5f4dc79d5ad0ea2564e8abf937915ab5961f9721f68400e",
+  "codata_2022_u_kg": 1.66053906892e-27,
+  "codata_2022_K_eV": 0.004180159274656468,
+  "hbar_from_exact_h_J_s": 1.0545718176461565e-34,
+  "note": "Active K uses the engine hbar 1.054571817e-34 J s and CODATA 2018 u. h/(2*pi) and CODATA 2022 u are recorded and are not substituted. The three historical K values are not used as inputs."
+}

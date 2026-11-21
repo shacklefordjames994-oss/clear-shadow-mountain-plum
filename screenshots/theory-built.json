@@ -1,0 +1,40 @@
+{
+  "url": "http://127.0.0.1:8081/theory",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 2034,
+      "bodyTextHash": "fea2126e9b802b996c8c652b8ab8f4a3e69fc046ff67bdf07f219daa905bb355",
+      "bodyTextPrefix": "OMEGA v6.0 SEQ 001842 A2 CLEAR 04:00:31Z SELF-ORGANIZATION != SE",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/theory-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 1816,
+      "bodyTextHash": "09e335abf2388dbba89d6c6fd91bea1a573676ccbeb314c91e6a742ce8df0d52",
+      "bodyTextPrefix": "OMEGA A2 CLEAR THEORY FABRIC V5.3 Validation workbench Dimension",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/theory-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/theory-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "desktop: body text replaced (similar length, page start changed)"
+  ]
+}

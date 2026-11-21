@@ -1,0 +1,40 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 1795,
+      "bodyTextHash": "55739dac5e25386515de249f8e31d12c2ebcf539bb80cb4334fbdd9129438b86",
+      "bodyTextPrefix": "OMEGA v6.0 SEQ 001842 A2 CLEAR 03:55:06Z SELF-ORGANIZATION != SE",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 1584,
+      "bodyTextHash": "cfc0b3e54381e460dd73f6c56273e57f890c5b63927f1615d8fd1fbb0bbde16c",
+      "bodyTextPrefix": "OMEGA A2 CLEAR OMEGA V6.0 · UNIFIED FABRIC Command center One bu",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "desktop: body text replaced (similar length, page start changed)"
+  ]
+}

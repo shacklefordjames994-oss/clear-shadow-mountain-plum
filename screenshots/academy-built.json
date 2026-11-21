@@ -1,0 +1,40 @@
+{
+  "url": "http://127.0.0.1:8081/train",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 2180,
+      "bodyTextHash": "d925bb2f107ddc2ed7e5be41695bfdaf50f32a7008073031f8372facbbe982db",
+      "bodyTextPrefix": "OMEGA v6.0 SEQ 001842 A2 CLEAR 09:46:23Z SELF-ORGANIZATION != SE",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/academy-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 1954,
+      "bodyTextHash": "b4a4083e1029e4286bb5f96f3dd7bb3e355ab9f1d8ea5aaae250718604f140cf",
+      "bodyTextPrefix": "OMEGA A2 CLEAR OMEGA ACADEMY How to run this room Ten short less",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/academy-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/academy-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "desktop: body text replaced (similar length, page start changed)"
+  ]
+}

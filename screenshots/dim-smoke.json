@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/theory",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 3952,
+      "bodyTextHash": "b0aa63ced1fe6b4cc55709aa67190ed502a6e1815822fd576c4213ec9bd4e53e",
+      "bodyTextPrefix": "OMEGA v6.0 SEQ 001842 A2 CLEAR 04:32:52Z SELF-ORGANIZATION != SE",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/dim-smoke.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 3734,
+      "bodyTextHash": "dcf528324ccd8a9eab00fe6f4abfed3afb71591e45f3edec09d9afc43aef5d4e",
+      "bodyTextPrefix": "OMEGA A2 CLEAR THEORY FABRIC V5.3 Dimensional structure Every ad",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/dim-smoke-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/dim-smoke.json"
+}

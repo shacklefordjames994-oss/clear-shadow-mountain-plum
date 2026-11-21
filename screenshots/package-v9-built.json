@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8081/package",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 1480,
+      "bodyTextHash": "afde42aa3650799dc521e9114facdf247ecf107caffd3ee24ae1bd14fe3ce55a",
+      "bodyTextPrefix": "OMEGA v6.0 SEQ 001842 A2 CLEAR 20:23:22Z SELF-ORGANIZATION != SE",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/package-v9-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 1198,
+      "bodyTextHash": "68ce24e2f876e02ecacd6f6fcb09bb079e2f5d1727a354018e364501e86f6055",
+      "bodyTextPrefix": "OMEGA A2 CLEAR DHC-TWIN V9 · PROFILED LIKELIHOOD Portable sealed",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/package-v9-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/package-v9-built.json"
+}

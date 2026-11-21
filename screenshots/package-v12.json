@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/package",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 1444,
+      "bodyTextHash": "d9cfbd3e58c6f3ca8cb231e4561f912c302e3116e2c523f0bbb12571b9599f5c",
+      "bodyTextPrefix": "OMEGA v6.0 SEQ 001842 A2 CLEAR --:--:--Z SELF-ORGANIZATION != SE",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/package-v12.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "OMEGA",
+      "hasCanvas": false,
+      "bodyTextLen": 1161,
+      "bodyTextHash": "0bdb0bec001225a3e21d90c26a13e4f49dfdb4c87dada41d9dfaf197c77d1dc2",
+      "bodyTextPrefix": "OMEGA A2 CLEAR DHC-TWIN V12 · FROZEN PROTOCOL Portable sealed ru",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/package-v12-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/package-v12.json"
+}
