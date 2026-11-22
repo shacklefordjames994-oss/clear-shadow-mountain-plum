@@ -1,0 +1,79 @@
+{
+  "classification": "COMPUTED",
+  "mesh_family": "uniform halving of a Dirichlet finite-difference matrix",
+  "comparison_target": "ARCHIVED_NUMEROV_REFERENCE",
+  "comparison_energy_eV": -4.5741727208,
+  "boundary_equivalence": false,
+  "formal_order": "NOT_ASSIGNED",
+  "rows": [
+    {
+      "h_over_a": 0.04,
+      "refinement_ratio": null,
+      "rmax_over_a": 6.0,
+      "matrix_energy_eV": -4.576526987924782,
+      "matrix_nodes": 0,
+      "numerov_same_h_energy_eV": -4.57419510073992,
+      "numerov_same_h_nodes": 0,
+      "matrix_minus_archived_numerov_eV": -0.002354267124782261,
+      "same_h_difference_eV": -0.0023318871848623246,
+      "like_for_like": false
+    },
+    {
+      "h_over_a": 0.02,
+      "refinement_ratio": 2.0,
+      "rmax_over_a": 6.0,
+      "matrix_energy_eV": -4.574758393953335,
+      "matrix_nodes": 0,
+      "numerov_same_h_energy_eV": -4.574174109232857,
+      "numerov_same_h_nodes": 0,
+      "matrix_minus_archived_numerov_eV": -0.0005856731533349091,
+      "same_h_difference_eV": -0.0005842847204782231,
+      "like_for_like": false
+    },
+    {
+      "h_over_a": 0.01,
+      "refinement_ratio": 2.0,
+      "rmax_over_a": 6.0,
+      "matrix_energy_eV": -4.574318961152364,
+      "matrix_nodes": 0,
+      "numerov_same_h_energy_eV": -4.574172807425034,
+      "numerov_same_h_nodes": 0,
+      "matrix_minus_archived_numerov_eV": -0.00014624035236376898,
+      "same_h_difference_eV": -0.00014615372732951215,
+      "like_for_like": false
+    },
+    {
+      "h_over_a": 0.005,
+      "refinement_ratio": 2.0,
+      "rmax_over_a": 6.0,
+      "matrix_energy_eV": -4.57420926981664,
+      "matrix_nodes": 0,
+      "numerov_same_h_energy_eV": -4.574172726218458,
+      "numerov_same_h_nodes": 0,
+      "matrix_minus_archived_numerov_eV": -3.6549016639852994e-05,
+      "same_h_difference_eV": -3.6543598182170456e-05,
+      "like_for_like": false
+    }
+  ],
+  "observed_orders": [
+    {
+      "from_h": 0.04,
+      "to_h": 0.02,
+      "refinement_ratio": 2.0,
+      "observed_order": 2.007110354353021
+    },
+    {
+      "from_h": 0.02,
+      "to_h": 0.01,
+      "refinement_ratio": 2.0,
+      "observed_order": 2.0017543126181034
+    },
+    {
+      "from_h": 0.01,
+      "to_h": 0.005,
+      "refinement_ratio": 2.0,
+      "observed_order": 2.000436955910289
+    }
+  ],
+  "note": "Observed orders are measured on this mesh family only. The comparison target uses a decaying tail, so the difference is not a pure truncation error. Formal order is not assigned."
+}

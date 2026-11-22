@@ -69,3 +69,28 @@ def numerov_sweep(
             )
             rows.append(row)
     return rows
+
+
+def classify_sweep(rows: list[dict]) -> dict:
+    """Split computed rows by node count. Nonzero nodes are not ground-state evidence."""
+    ground = []
+    excited = []
+    other = []
+    for row in rows:
+        if row.get("status") != "COMPUTED":
+            other.append(row)
+            continue
+        if row.get("nodes") == 0:
+            ground.append(row)
+        else:
+            excited.append(row)
+    energies = [row["energy_eV"] for row in ground if row.get("energy_eV") is not None]
+    return {
+        "ground_state_rows": ground,
+        "excited_or_other_root_rows": excited,
+        "not_computed_rows": other,
+        "ground_state_count": len(ground),
+        "excited_count": len(excited),
+        "ground_state_spread_eV": None if len(energies) < 2 else max(energies) - min(energies),
+        "note": "Only rows with nodes == 0 are ground-state rows. A computed excited root is not convergence evidence for the ground state.",
+    }

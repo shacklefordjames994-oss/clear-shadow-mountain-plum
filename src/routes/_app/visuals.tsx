@@ -7,8 +7,10 @@ import { VoiceConsole } from "@/components/omega/voice-console";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { FabricCanvas, type FabricPick } from "@/components/visuals/fabric-canvas";
+import { FusionStage } from "@/components/visuals/fusion-stage";
 import { DEFAULT_DETECTOR, DEFAULT_DM, DEFAULT_HALO } from "@/lib/omega/dark-matter/engine";
 import { composeLabRun } from "@/lib/omega/dark-matter/research-engine";
+import { FUSION_DIMS, type FusionDim } from "@/lib/omega/fusion-template";
 import { PLANES, type CameraPreset, type Plane4, type VisualMode, type VisualSubject } from "@/lib/omega/spacetime";
 import { useOmegaStore } from "@/lib/omega/store";
 import { cn } from "@/lib/utils";
@@ -17,7 +19,8 @@ export const Route = createFileRoute("/_app/visuals")({ component: VisualsPage }
 
 function VisualsPage() {
   const [mode, setMode] = useState<VisualMode>("3D");
-  const [subject, setSubject] = useState<VisualSubject>("SPACETIME");
+  const [subject, setSubject] = useState<VisualSubject | "FUSION">("FUSION");
+  const [fusionDim, setFusionDim] = useState<FusionDim>("2D");
   const [scrub, setScrub] = useState(0.42);
   const [spinning, setSpinning] = useState(true);
   const [planeA, setPlaneA] = useState<Plane4>("XW");
@@ -48,9 +51,9 @@ function VisualsPage() {
   return (
     <div>
       <PageHeader
-        kicker="Visual fabric · 2D / 3D / 4D"
-        title="Geometry is not complete state"
-        description="Two dimensions show a slice. Three show a volume. Four include time. None of these canvases are the plant, and none of them are evidence."
+        kicker="Visual fabric · 2D through XR"
+        title="The plates are templates"
+        description="The fusion posters set the 2D boards, the 3D spheres, the 4D storyboard, the 5D energy class, the 6D charge and overlap gate, and the XR stereo plate. None of those views is a measurement."
         actions={
           <>
             <Button variant={spinning ? "outline" : "default"} onClick={() => setSpinning((v) => !v)}>
@@ -64,7 +67,7 @@ function VisualsPage() {
       />
 
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-        <Stat label="Mode" value={mode} hint={mode === "4D" ? `${planeA} then ${planeB}` : mode === "3D" ? "volume + orbit" : "slice"} />
+        <Stat label="Mode" value={subject === "FUSION" ? fusionDim : mode} hint={subject === "FUSION" ? "poster template" : mode === "4D" ? `${planeA} then ${planeB}` : mode === "3D" ? "volume + orbit" : "slice"} />
         <Stat label="Events" value={lab.events.length} hint="SCI:SIMULATED" />
         <Stat label="Time slab" value={`${(scrub * 365).toFixed(0)} d`} hint="4D window center" />
         <Stat
@@ -75,19 +78,16 @@ function VisualsPage() {
       </div>
 
       <div className="mt-4 flex flex-wrap gap-1">
-        {(["2D", "3D", "4D"] as VisualMode[]).map((m) => (
-          <button
-            key={m}
-            type="button"
-            onClick={() => setMode(m)}
-            className={cn(
-              "h-11 min-w-11 rounded-md px-4 text-sm",
-              mode === m ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground",
-            )}
-          >
-            {m}
-          </button>
-        ))}
+        <button
+          type="button"
+          onClick={() => setSubject("FUSION")}
+          className={cn(
+            "h-11 rounded-md px-3 text-sm",
+            subject === "FUSION" ? "bg-accent text-foreground" : "text-muted-foreground hover:bg-accent/60",
+          )}
+        >
+          Fusion plates
+        </button>
         {(["COOLING", "TPC", "SPACETIME"] as VisualSubject[]).map((s) => (
           <button
             key={s}
@@ -103,7 +103,41 @@ function VisualsPage() {
         ))}
       </div>
 
-      {mode !== "2D" ? (
+      {subject === "FUSION" ? (
+        <div className="mt-3 flex flex-wrap gap-1">
+          {FUSION_DIMS.map((item) => (
+            <button
+              key={item}
+              type="button"
+              onClick={() => setFusionDim(item)}
+              className={cn(
+                "h-11 min-w-11 rounded-md px-4 text-sm",
+                fusionDim === item ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground",
+              )}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      ) : (
+        <div className="mt-3 flex flex-wrap gap-1">
+          {(["2D", "3D", "4D"] as VisualMode[]).map((m) => (
+            <button
+              key={m}
+              type="button"
+              onClick={() => setMode(m)}
+              className={cn(
+                "h-11 min-w-11 rounded-md px-4 text-sm",
+                mode === m ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground",
+              )}
+            >
+              {m}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {subject !== "FUSION" && mode !== "2D" ? (
         <div className="mt-3 flex flex-wrap gap-1">
           {(["ISO", "TPC", "T14", "4D"] as CameraPreset[]).map((p) => (
             <button
@@ -121,7 +155,7 @@ function VisualsPage() {
         </div>
       ) : null}
 
-      {mode === "4D" ? (
+      {subject !== "FUSION" && mode === "4D" ? (
         <div className="mt-3 flex flex-wrap gap-1">
           {PLANES.map((p) => (
             <button
@@ -145,7 +179,9 @@ function VisualsPage() {
       <Panel
         className="mt-4"
         title={
-          mode === "2D"
+          subject === "FUSION"
+            ? `Fusion template · ${fusionDim}`
+            : mode === "2D"
             ? subject === "COOLING"
               ? "DigiSim field (2D)"
               : subject === "TPC"
@@ -157,20 +193,21 @@ function VisualsPage() {
         }
         meta={<Badge tone="info">{fault}</Badge>}
       >
-        {mode === "2D" && subject === "COOLING" ? <FluidCanvas /> : null}
-        {mode === "2D" && subject === "TPC" ? (
+        {subject === "FUSION" ? <FusionStage dim={fusionDim} /> : null}
+        {subject !== "FUSION" && mode === "2D" && subject === "COOLING" ? <FluidCanvas /> : null}
+        {subject !== "FUSION" && mode === "2D" && subject === "TPC" ? (
           <div className="grid min-w-0 gap-3 lg:grid-cols-2">
             <TpcCanvas events={lab.events} radiusM={detector.radiusM} heightM={detector.heightM} sliceZ={sliceY} />
             <S2S1Canvas events={lab.events} />
           </div>
         ) : null}
-        {mode === "2D" && subject === "SPACETIME" ? (
+        {subject !== "FUSION" && mode === "2D" && subject === "SPACETIME" ? (
           <div className="grid min-w-0 gap-3 lg:grid-cols-2">
             <Spacetime2DCanvas events={lab.events} scrub={scrub} axis="RT" />
             <Spacetime2DCanvas events={lab.events} scrub={scrub} axis="ZT" />
           </div>
         ) : null}
-        {mode !== "2D" ? (
+        {subject !== "FUSION" && mode !== "2D" ? (
           <FabricCanvas
             mode={mode}
             subject={subject}
@@ -190,7 +227,7 @@ function VisualsPage() {
           />
         ) : null}
 
-        {mode === "3D" || (mode === "2D" && subject === "TPC") ? (
+        {subject !== "FUSION" && (mode === "3D" || (mode === "2D" && subject === "TPC")) ? (
           <label className="mt-3 block text-xs text-muted-foreground">
             <span className="flex justify-between">
               Height slice
@@ -208,7 +245,7 @@ function VisualsPage() {
           </label>
         ) : null}
 
-        {mode === "4D" || (mode === "2D" && subject === "SPACETIME") ? (
+        {subject !== "FUSION" && (mode === "4D" || (mode === "2D" && subject === "SPACETIME")) ? (
           <div className="mt-3 grid gap-3 sm:grid-cols-2">
             <label className="block text-xs text-muted-foreground">
               <span className="flex justify-between">
@@ -259,6 +296,16 @@ function VisualsPage() {
 
       <div className="mt-4 grid min-w-0 gap-4 lg:grid-cols-[minmax(0,1fr)_22rem]">
         <Panel title="What each extra dimension adds">
+          {subject === "FUSION" ? (
+            <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+              <li><span className="text-foreground">2D</span> — the poster plates, plus the reaction plane.</li>
+              <li><span className="text-foreground">3D</span> — the same particles, orbitable.</li>
+              <li><span className="text-foreground">4D</span> — storyboard time: approach, overlap, exchange, scatter, bind or reject.</li>
+              <li><span className="text-foreground">5D</span> — energy class: rest, above rest, below rest.</li>
+              <li><span className="text-foreground">6D</span> — charge residual and overlap. Both must clear before the template fuses.</li>
+              <li><span className="text-foreground">XR</span> — a stereo plate. No headset is started.</li>
+            </ul>
+          ) : (
           <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
             <li>
               <span className="text-foreground">2D</span> — a cut. Cooling dye plus velocity arrows, S2/S1, or paired
@@ -273,6 +320,7 @@ function VisualsPage() {
               YW / ZW. A pretty 5σ-looking cluster in a slab can vanish when you rotate w.
             </li>
           </ul>
+          )}
         </Panel>
         <VoiceConsole compact />
       </div>

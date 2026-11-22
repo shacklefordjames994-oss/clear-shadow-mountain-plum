@@ -17,11 +17,15 @@ Separate tridiagonal solver from Brunetti, Speciale and Rudan 2021. Not a call t
 
 `assemble_brunetti_speciale_rudan_2021` is the band form of preprint equations (16)–(19). The dense solver uses that same row. A text extraction of CC-BY preprint 10.21203/rs.3.rs-229482/v1 was checked. The Springer page images were not. The linear solution `u = 2 + 3x` passes on a nonuniform grid. Uniform refinement records a measured order and still leaves the formal order `NOT_ASSIGNED`. 05-E was not edited.
 
+## Follow-up on the reconstruction branch
 
-## Reconstruction branch
+Root tests now cover an invalid interior sample, a reversed bracket, an exact zero, a failed final reevaluation, and a residual that is too large. The matrix and Numerov outer boundaries are reported separately. DOP853 at match `r/a = 1.5` is recorded as a failed zero-node search. `66 passed` locally. GitHub CI has no check runs. `main` is still untouched. Release status remains `NOT_CERTIFIED`.
 
 `reconstruction/phase3-4-and-validation` adds the shared root contract, the DOP853 eigenvalue match, the symmetric matrix ground state, and the validation campaign. `main` is unchanged. Release status remains `NOT_CERTIFIED`.
 
+## Step study on the reconstruction branch
+
+The Dirichlet matrix was refined by exact step halving at `R = 6a`. The gap to the archived Numerov energy shrank, and the measured orders were about 2. Formal order stays `NOT_ASSIGNED`. A pytest workflow was added. No GitHub check is claimed as passed. `main` is unchanged. Release status remains `NOT_CERTIFIED`.
 
 ## Still out
 

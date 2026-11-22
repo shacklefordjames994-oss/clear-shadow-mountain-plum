@@ -91,3 +91,61 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+.fusion-well {
+  position: relative;
+  min-height: 280px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--color-card);
+  box-shadow: var(--shadow-border);
+}
+
+.fusion-plate {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.28;
+}
+
+.fusion-rig {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  transform-style: preserve-3d;
+}
+
+.fusion-body {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  border-radius: 999px;
+  box-shadow: var(--shadow-border-hover);
+}
+
+.fusion-body-free {
+  background: radial-gradient(circle at 32% 30%, var(--color-foreground), var(--color-info) 46%, var(--color-background));
+}
+
+.fusion-body-hot {
+  background: radial-gradient(circle at 32% 30%, var(--color-foreground), var(--color-warn) 42%, var(--color-destructive));
+}
+
+.fusion-body-bound {
+  width: 112px;
+  height: 112px;
+  background: radial-gradient(circle at 32% 30%, var(--color-foreground), var(--color-info) 36%, var(--color-warn));
+}
+
+.fusion-eye {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-foreground);
+}
+

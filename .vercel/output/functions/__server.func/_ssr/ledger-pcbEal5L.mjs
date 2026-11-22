@@ -1,0 +1,407 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/ledger-pcbEal5L.js
+var ledger_default = {
+	record_id: "SQRT-D02-GAUSS-001",
+	engine: "SQRT-01-ENGINE-05",
+	solver: "numerov-fixed-step-v1",
+	adaptive_solver: "richardson-global-fourth-order-v1",
+	method_order_global: 4,
+	error_estimator: "global-richardson",
+	controller_exponent: .25,
+	mesh_frozen_during_root_search: true,
+	independent_leg_adaptation: "uniform-legs-frozen-root-search",
+	local_step_doubling_implemented: false,
+	variable_step_recurrence_implemented: false,
+	experimental_validation: false,
+	repository_publication: false,
+	epistemic_status: {
+		"fixed_step_numerov": "TESTED",
+		"global_richardson_refinement": "TESTED",
+		"independent_leg_adaptation": "TESTED",
+		"variable_step_numerov": "TESTED",
+		"nonuniform_grid_numerov": "TESTED",
+		"pytest": "TESTED",
+		"experimental_measurement": "NOT_VALIDATED"
+	},
+	constants: {
+		"hbar_J_s": 1054571817e-43,
+		"u_kg": 16605390666e-37,
+		"eV_J": 1602176634e-28,
+		"Es_eV": .0041801592804967215,
+		"g": 1196.1266699401604
+	},
+	potential: {
+		"form": "V(r)=-V0*exp(-(r/a)^2)",
+		"mu_u": .5,
+		"V0_eV": 5,
+		"a_pm": 100,
+		"ell": 0
+	},
+	boundary_conditions: {
+		"origin": "u(0)=0 with u(h)=h for ell=0",
+		"outer": "inward decaying exp(-sqrt(-epsilon)*x), constant kappa",
+		"match": "corrected logarithmic derivatives at match/a=0.17",
+		"rmax_over_a": 6
+	},
+	archived_reference_energy_eV: -4.5741727208,
+	grid_convergence: [
+		{
+			"h_over_a": .01,
+			"energy_eV": -4.574172807425034,
+			"archived_energy_eV": -4.57417280742503,
+			"absolute_difference_eV": -4440892098500626e-30,
+			"norm": .9999999999999999,
+			"nodes": 0,
+			"mean_radius_pm": 19.529641993494515,
+			"tail_probability": .11571577730846237,
+			"truncated_tail_probability": 18792604563251902e-170,
+			"matching_residual": 8263112416528884e-28,
+			"potential_evaluations": 13823,
+			"residual_evaluations": 23,
+			"n_points": 601,
+			"root_bracket_eV": [-4.591111320754717, -4.559666037735849]
+		},
+		{
+			"h_over_a": .005,
+			"energy_eV": -4.574172726218458,
+			"archived_energy_eV": -4.574172726218435,
+			"absolute_difference_eV": -23092638912203256e-30,
+			"norm": .9999999999999999,
+			"nodes": 0,
+			"mean_radius_pm": 19.529644998642457,
+			"tail_probability": .11555597803520556,
+			"truncated_tail_probability": 1892738965615252e-169,
+			"matching_residual": -3499978085130806e-29,
+			"potential_evaluations": 27623,
+			"residual_evaluations": 23,
+			"n_points": 1201,
+			"root_bracket_eV": [-4.591111320754717, -4.559666037735849]
+		},
+		{
+			"h_over_a": .0025,
+			"energy_eV": -4.574172721145459,
+			"archived_energy_eV": -4.574172721145481,
+			"absolute_difference_eV": 2220446049250313e-29,
+			"norm": 1.0000000000000002,
+			"nodes": 0,
+			"mean_radius_pm": 19.529645186466336,
+			"tail_probability": .1155160134197469,
+			"truncated_tail_probability": 1893587855119147e-169,
+			"matching_residual": -10850764731173967e-28,
+			"potential_evaluations": 55223,
+			"residual_evaluations": 23,
+			"n_points": 2401,
+			"root_bracket_eV": [-4.591111320754717, -4.559666037735849]
+		},
+		{
+			"h_over_a": .00125,
+			"energy_eV": -4.574172720828622,
+			"archived_energy_eV": -4.574172720828307,
+			"absolute_difference_eV": -31441516057384433e-29,
+			"norm": 1.0000000000000002,
+			"nodes": 0,
+			"mean_radius_pm": 19.529645198207014,
+			"tail_probability": .11550598478154266,
+			"truncated_tail_probability": 18936409830068483e-170,
+			"matching_residual": 6845274347355712e-27,
+			"potential_evaluations": 110423,
+			"residual_evaluations": 23,
+			"n_points": 4801,
+			"root_bracket_eV": [-4.591111320754717, -4.559666037735849]
+		},
+		{
+			"h_over_a": 625e-6,
+			"energy_eV": -4.57417272080905,
+			"archived_energy_eV": -4.574172720808557,
+			"absolute_difference_eV": -4929390229335695e-28,
+			"norm": 1,
+			"nodes": 0,
+			"mean_radius_pm": 19.52964519892723,
+			"tail_probability": .11550346554626906,
+			"truncated_tail_probability": 18936443046634625e-170,
+			"matching_residual": 2323535808201882e-26,
+			"potential_evaluations": 220823,
+			"residual_evaluations": 23,
+			"n_points": 9601,
+			"root_bracket_eV": [-4.591111320754717, -4.559666037735849]
+		}
+	],
+	domain_convergence_h_over_a_0_0025: [
+		{
+			"rmax_over_a": 4,
+			"energy_eV": -4.57417272114547,
+			"matching_residual": 5085099008539373e-28,
+			"truncated_tail_probability": 5.525745717402879e-97
+		},
+		{
+			"rmax_over_a": 5,
+			"energy_eV": -4.574172721145476,
+			"matching_residual": 32804314820111813e-29,
+			"truncated_tail_probability": 10229120296701643e-141
+		},
+		{
+			"rmax_over_a": 6,
+			"energy_eV": -4.574172721145459,
+			"matching_residual": -10850764731173967e-28,
+			"truncated_tail_probability": 1893587855119147e-169
+		},
+		{
+			"rmax_over_a": 8,
+			"energy_eV": -4.574172721145497,
+			"matching_residual": 1803834859259723e-27,
+			"truncated_tail_probability": 6489030364474638e-227
+		},
+		{
+			"rmax_over_a": 10,
+			"energy_eV": -4.574172721145471,
+			"matching_residual": -17888468484272835e-29,
+			"truncated_tail_probability": 22236895403277565e-285
+		}
+	],
+	reference_h_over_a_0_0025: {
+		"h_over_a": .0025,
+		"energy_eV": -4.574172721145459,
+		"archived_energy_eV": -4.574172721145481,
+		"absolute_difference_eV": 2220446049250313e-29,
+		"norm": 1.0000000000000002,
+		"nodes": 0,
+		"mean_radius_pm": 19.529645186466336,
+		"tail_probability": .1155160134197469,
+		"truncated_tail_probability": 1893587855119147e-169,
+		"matching_residual": -10850764731173967e-28,
+		"potential_evaluations": 55223,
+		"residual_evaluations": 23,
+		"n_points": 2401,
+		"root_bracket_eV": [-4.591111320754717, -4.559666037735849]
+	},
+	adaptive: {
+		"energy_eV": -4.574172720795858,
+		"estimated_error_eV": 2.995650661588019e-8,
+		"relative_error": 6.549054538252783e-9,
+		"step_size": .00766843507346135,
+		"iterations": 3,
+		"converged": true,
+		"history": [
+			{
+				"iteration": 1,
+				"step_size": .02,
+				"previous_step_size": .04,
+				"q": 2,
+				"coarse_energy": -4.57419510073992,
+				"fine_energy": -4.574174109232857,
+				"richardson_energy": -4.574172709799053,
+				"estimated_error": 13994338042166987e-22,
+				"relative_error": 3.059424934302878e-7
+			},
+			{
+				"iteration": 2,
+				"step_size": .01,
+				"previous_step_size": .02,
+				"q": 2,
+				"coarse_energy": -4.574174109232857,
+				"fine_energy": -4.574172807425034,
+				"richardson_energy": -4.574172720637846,
+				"estimated_error": 8.678718816194456e-8,
+				"relative_error": 1.8973308062980734e-8
+			},
+			{
+				"iteration": 3,
+				"step_size": .00766843507346135,
+				"previous_step_size": .01,
+				"q": 1.3040470323088016,
+				"coarse_energy": -4.574172807425034,
+				"fine_energy": -4.574172750752364,
+				"richardson_energy": -4.574172720795858,
+				"estimated_error": 2.995650661588019e-8,
+				"relative_error": 6.549054538252783e-9
+			}
+		],
+		"potential_evaluations": 42228,
+		"calls": [
+			{
+				"h_over_a": .04,
+				"energy_eV": -4.57419510073992,
+				"potential_evaluations": 3473
+			},
+			{
+				"h_over_a": .02,
+				"energy_eV": -4.574174109232857,
+				"potential_evaluations": 6923
+			},
+			{
+				"h_over_a": .01,
+				"energy_eV": -4.574172807425034,
+				"potential_evaluations": 13823
+			},
+			{
+				"h_over_a": .00766843507346135,
+				"energy_eV": -4.574172750752364,
+				"potential_evaluations": 18009
+			}
+		],
+		"comparison": {
+			"fixed_h_0_000625_potential_evaluations": 220823,
+			"adaptive_potential_evaluations": 42228,
+			"ratio_adaptive_over_fine_fixed": .19123008019997917,
+			"note": "Measured on this benchmark only. ratio_adaptive_over_fine_fixed compares one adaptive run (relative tolerance 1e-8, initial step 0.02) with one fixed-step solve at h/a=0.000625. It is not a general 3-5x guarantee. Global refinement still performs several complete eigenvalue solves."
+		}
+	},
+	legs: {
+		"solver": "independent-uniform-legs",
+		"energy_eV": -4.57417289940069,
+		"estimated_error_eV": 6.594625076535483e-7,
+		"relative_error": 1.441708746383311e-7,
+		"n_out": 16,
+		"n_in": 584,
+		"h_out": .010625,
+		"h_in": .009982876712328767,
+		"iterations": 1,
+		"converged": true,
+		"potential_evaluations": 16968,
+		"mesh_frozen_during_root_search": true,
+		"history": [{
+			"iteration": 1,
+			"n_out": 8,
+			"n_in": 292,
+			"h_out": .02125,
+			"h_in": .019965753424657534,
+			"coarse_energy_eV": -4.574175577810625,
+			"outward_refined_energy_eV": -4.57416929263685,
+			"inward_refined_energy_eV": -4.574179184574465,
+			"combined_energy_eV": -4.57417289940069,
+			"estimated_error_eV": 6.594625076535483e-7,
+			"relative_error": 1.441708746383311e-7,
+			"mesh_frozen_during_root_search": true
+		}],
+		"reference_difference_eV": -1.7825523102033003e-7,
+		"note": "Each eigenvalue search uses one frozen (n_out, n_in) pair. The reported energy combines a doubled outward leg and a doubled inward leg. This is not a variable-step Numerov recurrence and not a measurement."
+	},
+	variable_step: {
+		"solver": "vigo-aguiar-ramos-2005-eq8",
+		"prefactor": "h_n^2/12",
+		"rejected_prefactor": "h_{n+1}^2/12",
+		"energy_eV": -4.574172779426034,
+		"reference_difference_eV": -5.828057503265427e-8,
+		"h_inner": .01,
+		"h_outer": .02,
+		"step_ratio": 2,
+		"n_points": 326,
+		"potential_evaluations": 4564,
+		"mesh_frozen_during_root_search": true,
+		"local_order_when_ratio_is_one": 6,
+		"local_order_when_ratio_changes": 5,
+		"note": "Equation (8) on one frozen two-zone mesh. The printed step-size equation cannot increase the step, so it is not used to build this mesh. This is not the 2005 Woods-Saxon eigenvalue table and not a measurement."
+	},
+	nonuniform_grid: {
+		"solver": "brunetti-speciale-rudan-2021",
+		"doi": "10.1007/s10825-021-01699-3",
+		"problem": "manufactured solution (20), reconstructed c and s",
+		"source_identity": "EXACT_SYMBOLIC",
+		"formal_order": "NOT_ASSIGNED",
+		"runs": [
+			{
+				"n_internal": 160,
+				"max_error": 2.954852518740247,
+				"finite_difference_max_error": 180.56385423390404,
+				"grid": "uniform",
+				"characteristic_spacing": .006211180124223602,
+				"reduction_ratio": null,
+				"observed_order": null,
+				"formal_order": "NOT_ASSIGNED"
+			},
+			{
+				"n_internal": 320,
+				"max_error": .21089936362344197,
+				"finite_difference_max_error": 651.4646179166522,
+				"grid": "uniform",
+				"characteristic_spacing": .003115264797507788,
+				"reduction_ratio": 14.010722782530996,
+				"observed_order": 3.825626560222531,
+				"formal_order": "NOT_ASSIGNED"
+			},
+			{
+				"n_internal": 640,
+				"max_error": .013570338753509326,
+				"finite_difference_max_error": 33.02378707776391,
+				"grid": "uniform",
+				"characteristic_spacing": .0015600624024961,
+				"reduction_ratio": 15.541201104423633,
+				"observed_order": 3.9669475308559945,
+				"formal_order": "NOT_ASSIGNED"
+			}
+		],
+		"coefficient_source": "preprint-10.21203/rs.3.rs-229482/v1 equations 16-19, text extraction",
+		"springer_page_images_checked": false,
+		"note": "Separate tridiagonal boundary-value method. Not a variable-step call and not a Gaussian eigenvalue. Observed order is measured on uniform meshes with spacing 1/(N+1). Formal order is not assigned. Not a measurement."
+	},
+	spec_record: {
+		"engine": "SQRT-01-ENGINE-05",
+		"solver": "fixed-step-numerov+global-richardson",
+		"method_order_global": 4,
+		"error_estimator": "global-richardson",
+		"controller_exponent": .25,
+		"mesh_frozen_during_root_search": true,
+		"potential_parameters": {
+			"V0_eV": 5,
+			"a_pm": 100,
+			"mu_u": .5,
+			"ell": 0
+		},
+		"potential_evaluations": 42228,
+		"accepted_steps": 3,
+		"rejected_steps": 0,
+		"eigenvalue_eV": -4.574172720795858,
+		"estimated_error_eV": 2.995650661588019e-8,
+		"matching_residual": -10850764731173967e-28,
+		"normalization": 1.0000000000000002,
+		"convergence_verified": true,
+		"experimental_validation": false,
+		"name_note": "The template name adaptive-numerov is not used. This run is global Richardson refinement around the fixed-step solver, not a variable-step Numerov recurrence. rejected_steps is 0 because this controller does not reject local intervals."
+	},
+	variational: {
+		"recomputed": {
+			"sigma_pm": 17.32126765501043,
+			"energy_eV": -4.574143873272051,
+			"archived_energy_eV": -4.574143873272,
+			"archived_sigma_pm": 17.32126735,
+			"is_upper_bound": true
+		},
+		"at_archived_width": {
+			"sigma_pm": 17.32126735,
+			"energy_eV": -4.574143873272051,
+			"archived_energy_eV": -4.574143873272,
+			"archived_sigma_pm": 17.32126735,
+			"is_upper_bound": true
+		},
+		"formula": "T=3*hbar^2/(4*mu*s^2); V=-V0*(1+s^2/a^2)^(-3/2)",
+		"note": "Variational energy is an upper bound on the computation, not an exact eigenvalue and not a measurement."
+	},
+	runtime: {
+		"python": "3.10.21",
+		"numpy": "2.2.6"
+	},
+	limitations: [
+		"Synthetic Gaussian well, not a QCD or experimental spectrum.",
+		"Fixed-step Numerov is the reference recurrence.",
+		"05-B refines the global spacing; it is not a variable-step Numerov.",
+		"05-D freezes separate outward and inward uniform meshes during each root search. It is not a variable-step Numerov.",
+		"05-E uses Vigo-Aguiar and Ramos 2005 equation (8), with prefactor h_n^2/12. A draft prefactor h_{n+1}^2/12 was rejected.",
+		"When the step ratio is not 1, the local error of equation (8) drops from O(h^6) to O(h^5).",
+		"The printed 2005 step-size equation has no root larger than the previous step, so it cannot increase the step.",
+		"The Gaussian two-zone run is not a reproduction of the 2005 Woods-Saxon table.",
+		"05-F is the 2021 Brunetti-Speciale-Rudan tridiagonal system. It is not the 2005 recurrence.",
+		"05-F coefficients were checked against a text extraction of preprint 10.21203/rs.3.rs-229482/v1 equations (16)-(19). The Springer page images were not photographed.",
+		"On uniform meshes the measured error ratio gives an observed order near 4. Formal order stays NOT_ASSIGNED.",
+		"The 2021 manufactured coefficients were reconstructed from solution (20); the extracted text of (21) did not satisfy the ODE.",
+		"Elliptic centrifugal start for ell>0 is implemented but not part of this certified benchmark.",
+		"Excited-state brackets are not certified.",
+		"No experimental validation. A code upload is not an experimental publication."
+	],
+	pytest: {
+		"exit_code": 0,
+		"passed": true,
+		"summary": "39 passed in 4.87s"
+	},
+	content_sha256: "6ebf2523d691beb721fa7d0d44d92867a15ed0e23f9cde0ffa898198065045a5"
+};
+//#endregion
+export { ledger_default as t };

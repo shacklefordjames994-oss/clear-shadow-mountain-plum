@@ -28,6 +28,7 @@ import { Route as AppPhysicsRouteImport } from './routes/_app/physics'
 import { Route as AppQcorrRouteImport } from './routes/_app/qcorr'
 import { Route as AppResearchRouteImport } from './routes/_app/research'
 import { Route as AppScenariosRouteImport } from './routes/_app/scenarios'
+import { Route as AppSynthesisRouteImport } from './routes/_app/synthesis'
 import { Route as AppTheoryRouteImport } from './routes/_app/theory'
 import { Route as AppTrainRouteImport } from './routes/_app/train'
 import { Route as AppTwinsRouteImport } from './routes/_app/twins'
@@ -128,6 +129,11 @@ const AppScenariosRoute = AppScenariosRouteImport.update({
   path: '/scenarios',
   getParentRoute: () => AppRoute,
 } as any)
+const AppSynthesisRoute = AppSynthesisRouteImport.update({
+  id: '/synthesis',
+  path: '/synthesis',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppTheoryRoute = AppTheoryRouteImport.update({
   id: '/theory',
   path: '/theory',
@@ -173,6 +179,7 @@ export interface FileRoutesByFullPath {
   '/qcorr': typeof AppQcorrRoute
   '/research': typeof AppResearchRoute
   '/scenarios': typeof AppScenariosRoute
+  '/synthesis': typeof AppSynthesisRoute
   '/theory': typeof AppTheoryRoute
   '/train': typeof AppTrainRoute
   '/twins': typeof AppTwinsRoute
@@ -197,6 +204,7 @@ export interface FileRoutesByTo {
   '/qcorr': typeof AppQcorrRoute
   '/research': typeof AppResearchRoute
   '/scenarios': typeof AppScenariosRoute
+  '/synthesis': typeof AppSynthesisRoute
   '/theory': typeof AppTheoryRoute
   '/train': typeof AppTrainRoute
   '/twins': typeof AppTwinsRoute
@@ -224,6 +232,7 @@ export interface FileRoutesById {
   '/_app/qcorr': typeof AppQcorrRoute
   '/_app/research': typeof AppResearchRoute
   '/_app/scenarios': typeof AppScenariosRoute
+  '/_app/synthesis': typeof AppSynthesisRoute
   '/_app/theory': typeof AppTheoryRoute
   '/_app/train': typeof AppTrainRoute
   '/_app/twins': typeof AppTwinsRoute
@@ -252,6 +261,7 @@ export interface FileRouteTypes {
     | '/qcorr'
     | '/research'
     | '/scenarios'
+    | '/synthesis'
     | '/theory'
     | '/train'
     | '/twins'
@@ -276,6 +286,7 @@ export interface FileRouteTypes {
     | '/qcorr'
     | '/research'
     | '/scenarios'
+    | '/synthesis'
     | '/theory'
     | '/train'
     | '/twins'
@@ -302,6 +313,7 @@ export interface FileRouteTypes {
     | '/_app/qcorr'
     | '/_app/research'
     | '/_app/scenarios'
+    | '/_app/synthesis'
     | '/_app/theory'
     | '/_app/train'
     | '/_app/twins'
@@ -449,6 +461,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppScenariosRouteImport
       parentRoute: typeof AppRoute
     }
+    '/_app/synthesis': {
+      id: '/_app/synthesis'
+      path: '/synthesis'
+      fullPath: '/synthesis'
+      preLoaderRoute: typeof AppSynthesisRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/_app/theory': {
       id: '/_app/theory'
       path: '/theory'
@@ -505,6 +524,7 @@ interface AppRouteChildren {
   AppQcorrRoute: typeof AppQcorrRoute
   AppResearchRoute: typeof AppResearchRoute
   AppScenariosRoute: typeof AppScenariosRoute
+  AppSynthesisRoute: typeof AppSynthesisRoute
   AppTheoryRoute: typeof AppTheoryRoute
   AppTrainRoute: typeof AppTrainRoute
   AppTwinsRoute: typeof AppTwinsRoute
@@ -531,6 +551,7 @@ const AppRouteChildren: AppRouteChildren = {
   AppQcorrRoute: AppQcorrRoute,
   AppResearchRoute: AppResearchRoute,
   AppScenariosRoute: AppScenariosRoute,
+  AppSynthesisRoute: AppSynthesisRoute,
   AppTheoryRoute: AppTheoryRoute,
   AppTrainRoute: AppTrainRoute,
   AppTwinsRoute: AppTwinsRoute,

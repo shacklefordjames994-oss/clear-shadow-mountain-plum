@@ -1,0 +1,132 @@
+{
+  "classification": "COMPUTED",
+  "experimental_validation": false,
+  "github_ci": "NO_CHECK_RUNS",
+  "pytest": {
+    "executed_locally": true,
+    "exit_code": 0,
+    "summary": "66 passed in 6.77s",
+    "log": "evidence/validation/pytest-followup.txt",
+    "github_ci": false
+  },
+  "boundary": {
+    "rows": [
+      {
+        "rmax_over_a": 4.0,
+        "h_over_a": 0.05,
+        "matrix_boundary": "u(0)=u(R)=0",
+        "numerov_boundary": "u(0)=0 and a decaying exponential at R",
+        "matrix_energy_eV": -4.57786514437722,
+        "matrix_nodes": 0,
+        "numerov_energy_eV": -4.574227668107145,
+        "numerov_nodes": 0,
+        "difference_eV": -0.00363747627007438,
+        "like_for_like": false
+      },
+      {
+        "rmax_over_a": 6.0,
+        "h_over_a": 0.05,
+        "matrix_boundary": "u(0)=u(R)=0",
+        "numerov_boundary": "u(0)=0 and a decaying exponential at R",
+        "matrix_energy_eV": -4.577865144377218,
+        "matrix_nodes": 0,
+        "numerov_energy_eV": -4.574227668107145,
+        "numerov_nodes": 0,
+        "difference_eV": -0.0036374762700726038,
+        "like_for_like": false
+      },
+      {
+        "rmax_over_a": 8.0,
+        "h_over_a": 0.05,
+        "matrix_boundary": "u(0)=u(R)=0",
+        "numerov_boundary": "u(0)=0 and a decaying exponential at R",
+        "matrix_energy_eV": -4.57786514437722,
+        "matrix_nodes": 0,
+        "numerov_energy_eV": -4.574227668107145,
+        "numerov_nodes": 0,
+        "difference_eV": -0.00363747627007438,
+        "like_for_like": false
+      }
+    ],
+    "matrix_domain_spread_eV": 1.7763568394002505e-15,
+    "numerov_domain_spread_eV": 0.0,
+    "cross_solver_difference_at_largest_domain_eV": -0.00363747627007438,
+    "classification": "COMPUTED",
+    "note": "Domain spread and cross-solver difference are separate. Neither is an experimental uncertainty."
+  },
+  "ode_sensitivity": [
+    {
+      "solver": "dop853-two-sided",
+      "rmax_over_a": 6.0,
+      "match_over_a": 0.17,
+      "boundary": "u(0)=0, u'(0)=1, inward u'(R)=-kappa u(R)",
+      "status": "COMPUTED",
+      "reason": "RESIDUAL_ACCEPTED",
+      "energy_eV": -4.574172720805074,
+      "residual": 6.2450045135165055e-15,
+      "nodes": 0
+    },
+    {
+      "solver": "dop853-two-sided",
+      "rmax_over_a": 6.0,
+      "match_over_a": 1.5,
+      "boundary": "u(0)=0, u'(0)=1, inward u'(R)=-kappa u(R)",
+      "status": "FAILED",
+      "reason": "NO_ZERO_NODE_ROOT",
+      "energy_eV": null,
+      "residual": null,
+      "nodes": null
+    },
+    {
+      "solver": "dop853-two-sided",
+      "rmax_over_a": 8.0,
+      "match_over_a": 0.17,
+      "boundary": "u(0)=0, u'(0)=1, inward u'(R)=-kappa u(R)",
+      "status": "COMPUTED",
+      "reason": "RESIDUAL_ACCEPTED",
+      "energy_eV": -4.574172720805096,
+      "residual": -9.894862706971708e-14,
+      "nodes": 0
+    },
+    {
+      "solver": "dop853-two-sided",
+      "rmax_over_a": 8.0,
+      "match_over_a": 1.5,
+      "boundary": "u(0)=0, u'(0)=1, inward u'(R)=-kappa u(R)",
+      "status": "FAILED",
+      "reason": "NO_ZERO_NODE_ROOT",
+      "energy_eV": null,
+      "residual": null,
+      "nodes": null
+    }
+  ],
+  "sweep_classification": {
+    "ground_state_count": 1,
+    "excited_count": 4,
+    "ground_state_matches": [
+      0.17
+    ],
+    "excited_matches": [
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "excited_nodes": [
+      9,
+      13,
+      13,
+      13
+    ],
+    "not_computed": [
+      {
+        "match_over_a": 3.5,
+        "rmax_over_a": 6.0,
+        "h_over_a": 0.05,
+        "status": "FAILED",
+        "reason": "NumerovError:No bracketed ground-state sign change in the search window"
+      }
+    ]
+  },
+  "scientific_release_status": "NOT_CERTIFIED"
+}

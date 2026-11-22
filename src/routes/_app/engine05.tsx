@@ -104,6 +104,10 @@ const VALIDATION = validationJson as {
   wavefunction: { overlap_with_matrix: number | null; nodes: number };
   sweep: Array<{ match_over_a: number; nodes: number | null; status: string }>;
   note: string;
+  follow_up?: {
+    observed_orders?: number[];
+    formal_order?: string;
+  };
 };
 
 function Engine05Page() {
@@ -319,16 +323,19 @@ function Engine05Page() {
           <div className="grid gap-3 sm:grid-cols-3">
             <Stat label="Fixed-step ground state" value={`${VALIDATION.reference_numerov.energy_eV.toFixed(10)} eV`} hint={`${VALIDATION.reference_numerov.nodes} nodes`} />
             <Stat label="DOP853 minus Numerov" value={`${VALIDATION.ode.difference_from_numerov_eV.toExponential(2)} eV`} hint="match r/a = 0.17" />
-            <Stat label="Matrix overlap" value={VALIDATION.wavefunction.overlap_with_matrix?.toFixed(6) ?? "not run"} hint={`${VALIDATION.matrix.h_0_01_eV.toFixed(6)} eV at h/a = 0.01`} />
+            <Stat label="Matrix overlap" value={VALIDATION.wavefunction.overlap_with_matrix?.toFixed(6) ?? "not run"} hint="not like-for-like: matrix uses u(R)=0" />
           </div>
           <p className="mt-3 text-sm text-muted-foreground">
             {VALIDATION.sweep.filter((row) => row.status === "COMPUTED" && row.nodes === 0).length} ground-state rows.
             {" "}
             {VALIDATION.sweep.filter((row) => row.status === "COMPUTED" && row.nodes !== 0).length} computed rows are excited states, not the ground state.
             {" "}
-            {VALIDATION.pytest ? VALIDATION.pytest.summary : "Tests were not recorded."}
+            {VALIDATION.pytest ? `${VALIDATION.pytest.summary}. Local run, not GitHub CI.` : "Tests were not recorded."}
             {" "}
             Experiment: {VALIDATION.experimental_validation ? "claimed" : "not validated"}.
+            {VALIDATION.follow_up?.observed_orders?.length
+              ? ` At R = 6a the matrix gap shrinks under step halving. Measured orders ${VALIDATION.follow_up.observed_orders.map((order) => order.toFixed(3)).join(", ")}. Formal order: ${VALIDATION.follow_up.formal_order ?? "not assigned"}.`
+              : ""}
           </p>
           <p className="mt-2 text-sm text-muted-foreground">{VALIDATION.note}</p>
         </Panel>

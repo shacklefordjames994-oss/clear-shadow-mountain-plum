@@ -616,10 +616,30 @@
     "variable_numerov.py": "b472c99bebb2308e92d7fe0de258fc1361ab7c3a1be53eb111542491c3fde0bf",
     "wavefunction_validation.py": "634e015ed0e3b208643f2daae16af5cb208425f2924e8e468590ec38b579d937"
   },
-  "note": "Match r/a=1.5 does not put a zero of the ground-state matching function at the historical energy. Rows with nonzero node counts are not the ground state. No gate is certified. Independent review was not run.",
+  "note": "The matrix uses u(R)=0. Numerov and DOP853 use a decaying tail. At R=6a, uniform step halving shrinks the matrix gap to the archived Numerov energy. Measured orders are about 2. Formal order is NOT_ASSIGNED. Rows with 9 or more nodes are not ground-state convergence. Tests were run locally. A GitHub Actions workflow is present, but no completed check is claimed. Release status remains NOT_CERTIFIED.",
   "pytest": {
     "exit_code": 0,
     "passed": true,
-    "summary": "55 passed in 2.92s"
+    "summary": "67 passed in 6.94s",
+    "github_ci": false
+  },
+  "follow_up": {
+    "matrix_like_for_like": false,
+    "matrix_domain_spread_eV": 1.7763568394002505e-15,
+    "numerov_domain_spread_eV": 0.0,
+    "cross_solver_difference_eV": -0.00363747627007438,
+    "ode_ground_state_count": 2,
+    "ode_rejected_outer_match": 2,
+    "pytest_summary": "67 passed in 6.94s",
+    "pytest_source": "local execution, not GitHub CI",
+    "github_ci": "NO_CHECK_RUNS",
+    "observed_orders": [
+      2.007110354353021,
+      2.0017543126181034,
+      2.000436955910289
+    ],
+    "formal_order": "NOT_ASSIGNED",
+    "matrix_gap_h_0_04_eV": -0.002354267124782261,
+    "matrix_gap_h_0_005_eV": -3.6549016639852994e-05
   }
 }
